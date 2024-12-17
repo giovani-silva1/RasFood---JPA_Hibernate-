@@ -17,8 +17,8 @@ import java.util.Objects;
  *
  */
 @Entity
-@Table(name = "pratos")
-public class Prato {
+@Table(name = "cardapio")
+public class Cardapio {
 
 
     @Id
@@ -36,10 +36,10 @@ public class Prato {
     @Column(name = "data_de_registro")
     private LocalDateTime dataRegistro = LocalDateTime.now();
 
-    public Prato() {
+    public Cardapio() {
     }
 
-    public Prato(Integer id, String nome, String descricao, Boolean disponivel, BigDecimal valor, LocalDateTime dataRegistro) {
+    public Cardapio(Integer id, String nome, String descricao, Boolean disponivel, BigDecimal valor, LocalDateTime dataRegistro) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -101,8 +101,8 @@ public class Prato {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Prato prato = (Prato) o;
-        return Objects.equals(id, prato.id);
+        Cardapio cardapio = (Cardapio) o;
+        return Objects.equals(id, cardapio.id);
     }
 
     @Override
